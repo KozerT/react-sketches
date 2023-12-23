@@ -1,73 +1,16 @@
 import Header from "./components/Header/Header";
-import CoreConcept from "./components/CoreConcepts/CoreConcept";
-import { CORE_CONCEPTS } from "./data";
-import TabButton from "./components/Buttons/TabButton";
-import { EXAMPLES } from "./data";
-import { useState } from "react";
+import CoreConcepts from "./components/CoreConcepts/CoreConcepts";
+import Examples from "./components/Examples/Examples";
 
 function App() {
-  const [selectedContent, setSelectedContent] = useState("");
-
-  // let tabContent = "Please click a button";
-
-  const handleOnClick = (selectedButton) => {
-    setSelectedContent(selectedButton);
-  };
-
   return (
-    <div>
+    <>
       <Header />
       <main>
-        <section id="core-concepts">
-          <h2>CORE FEATURES</h2>
-          <ul>
-            <CoreConcept {...CORE_CONCEPTS[0]} />
-            <CoreConcept {...CORE_CONCEPTS[1]} />
-            <CoreConcept {...CORE_CONCEPTS[2]} />
-            <CoreConcept {...CORE_CONCEPTS[3]} />
-          </ul>
-        </section>
-        <section id="examples">
-          <h2>Examples</h2>
-          <menu>
-            <TabButton
-              isSelected={selectedContent === "selenium"}
-              onClick={() => handleOnClick(`selenium`)}
-            >
-              {CORE_CONCEPTS[0].title}
-            </TabButton>
-            <TabButton
-              isSelected={selectedContent === "intuitive"}
-              onClick={() => handleOnClick(`intuitive`)}
-            >
-              {CORE_CONCEPTS[1].title}
-            </TabButton>
-            <TabButton
-              isSelected={selectedContent === "lessCode"}
-              onClick={() => handleOnClick(`lessCode`)}
-            >
-              {CORE_CONCEPTS[2].title}
-            </TabButton>
-            <TabButton
-              isSelected={selectedContent === "powerful"}
-              onClick={() => handleOnClick(`powerful`)}
-            >
-              {CORE_CONCEPTS[3].title}
-            </TabButton>
-          </menu>
-          {!selectedContent && <p>Please select topic.</p>}
-          {selectedContent && (
-            <div id="tab-content">
-              <h3>{EXAMPLES[selectedContent].title}</h3>
-              <p>{EXAMPLES[selectedContent].description}</p>
-              <pre>
-                <code>{EXAMPLES[selectedContent].code}</code>
-              </pre>
-            </div>
-          )}
-        </section>
+        <CoreConcepts />
+        <Examples />
       </main>
-    </div>
+    </>
   );
 }
 
