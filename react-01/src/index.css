@@ -1,16 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600&family=Roboto:wght@300;400;500;700&display=swap");
+@font-face {
+  font-family: "NetronRegular";
+  src: url("../src/fonts/Netron\ Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
-
+  font-weight: 300;
   color: #ebe7ef;
   background: radial-gradient(#3d3f40, #242526);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

@@ -1,4 +1,3 @@
-import reactImg from "../../assets/react-core-concepts.png";
 import "./Header.css";
 
 const reactDescription = ["Fundamental", "Crucial", "Core"];
@@ -11,7 +10,6 @@ const Header = () => {
 
   return (
     <header>
-      <img src={reactImg} alt="Stylized atom" />
       <h1>Kolibrium</h1>
       <p>{description} Kolibrium concepts.</p>
     </header>
