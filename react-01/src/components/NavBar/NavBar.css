@@ -1,0 +1,21 @@
+.navigation {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  color: white;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+}
+
+.navigation span {
+  display: inline-flex;
+}
+
+.navigation a {
+  color: white;
+  margin-right: 2px;
+}
