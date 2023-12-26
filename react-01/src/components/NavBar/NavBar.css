@@ -2,7 +2,7 @@
   height: 48px;
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+  padding: 0.313rem 2rem;
   color: white;
   align-items: center;
   background-color: black;
@@ -17,5 +17,10 @@
 
 .navigation a {
   color: white;
-  margin-right: 2px;
+  margin-right: 0.125rem;
+}
+
+.navigation__logo {
+  font-family: "NetronRegular";
+  font-size: medium;
 }

@@ -1,10 +1,13 @@
 import React from "react";
+import logo from "../../assets/logo.svg";
 import "./NavBar.css";
 
 const NavBar = () => {
   return (
     <nav className="navigation">
-      <span>Kolibrium</span>
+      <span className="navigation__logo">
+        <img src={logo} alt="Logo" /> Kolibrium
+      </span>
       <span></span>
     </nav>
   );
